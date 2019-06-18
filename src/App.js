@@ -26,11 +26,15 @@ class App extends React.Component{
       headers: {"Authorization": localStorage.getItem("token")}
     })
     .then(res => res.json())
-    .then(data => this.setState({
-      favorites: data.favorites,
-      visited: data.visited,
-      username: data.username
-    }, () => console.log('profile data', data)))
+    .then(data => {
+      this.setState({
+        favorites: data.favorites,
+        visited: data.visited,
+        username: data.username
+      })
+    })
+
+
     // debugger
   }
 
