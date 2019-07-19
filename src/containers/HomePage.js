@@ -5,6 +5,7 @@ import SearchBar from '../components/SearchBar'
 class HomePage extends React.Component{
   state={
     stores: [],
+    currentUserStores: [],
     filter: ''
   }
 
@@ -45,6 +46,7 @@ class HomePage extends React.Component{
 
 
   render(){
+    console.log('im here ', this.state.stores[0])
     return (
       <div className="homePage">
 

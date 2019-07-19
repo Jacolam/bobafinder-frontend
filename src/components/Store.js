@@ -10,17 +10,18 @@ class Store extends React.Component{
 
   componentDidMount(){
     // console.log(this.props.store.visited)
-    if( this.props.store.visited){
-      this.setState({
-        visited: true
-      })
-    }
-    // console.log(this.props.store.favorite)
-    if( this.props.store.favorite){
-      this.setState({
-        like: true
-      })
-    }
+      if( this.props.store.visited){
+        this.setState({
+          visited: true
+        })
+      }
+      // console.log(this.props.store.favorite)
+      if( this.props.store.favorite){
+        this.setState({
+          like: true
+        })
+      }
+  
   }
 
   handleClickLike = (e) => {
