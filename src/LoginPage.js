@@ -33,7 +33,13 @@ class LoginPage extends React.Component{
       },
       body: JSON.stringify(this.state)
     })
-    .then( res => res.json() )
+    .then( response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Please check your username and password.');
+      }
+    })
     .then( data => {
       localStorage.setItem('token', data.token)
       // needs to look to see if token is present and is not undefined
@@ -46,6 +52,9 @@ class LoginPage extends React.Component{
 
       }
     })
+    .catch((error) => {
+      alert('Not valid ID or Password.')
+    });
   }
 
   render(){

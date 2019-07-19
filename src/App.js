@@ -31,7 +31,6 @@ class App extends React.Component{
       visited: data.visited,
       username: data.username
     }, () => console.log('profile data', data)))
-    // debugger
   }
 
   favoriteClickHandler = (store) => {
