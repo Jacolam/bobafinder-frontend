@@ -19,7 +19,7 @@ class SignupPage extends React.Component{
     e.preventDefault()
 
     // creating a new user
-    fetch('http://localhost:3000/signup',{
+    fetch('https://frozen-temple-72152.herokuapp.com/signup',{
       method: "POST",
       headers: {
         "Content-Type": "application/json"

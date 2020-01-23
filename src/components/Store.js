@@ -31,7 +31,7 @@ class Store extends React.Component{
       like: !this.state.like
     })
 
-    fetch('http://localhost:3000/favorite',{
+    fetch('https://frozen-temple-72152.herokuapp.com/favorite',{
       method: "POST",
       headers: {
         "Authorization": localStorage.getItem("token"),
@@ -52,7 +52,7 @@ class Store extends React.Component{
       visited: !this.state.visited
     })
 
-    fetch('http://localhost:3000/visit',{
+    fetch('https://frozen-temple-72152.herokuapp.com/visit',{
       method: "POST",
       headers: {
         "Authorization": localStorage.getItem("token"),
