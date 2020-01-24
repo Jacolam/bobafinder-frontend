@@ -26,7 +26,7 @@ class LoginPage extends React.Component{
   handleSubmit = (e) => {
     e.preventDefault()
 
-    fetch('https://bobafinderbackend.herokuapp.com/login',{
+    fetch('https://frozen-temple-72152.herokuapp.com/login',{
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -47,9 +47,7 @@ class LoginPage extends React.Component{
       if (localStorage.getItem("token")==="undefined"){
         localStorage.clear()
       } else if (!!localStorage.getItem("token")){
-        window.location.replace(`http://localhost:3001/`)
-        // this.props.router.history.push('/')
-
+        window.location.replace(`http://localhost:3000/login`)
       }
     })
     .catch((error) => {

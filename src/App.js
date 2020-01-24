@@ -22,15 +22,15 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    fetch('https://bobafinderbackend.herokuapp.com/profile', {
-      headers: {"Authorization": localStorage.getItem("token")}
-    })
-    .then(res => res.json())
-    .then(data => this.setState({
-      favorites: data.favorites,
-      visited: data.visited,
-      username: data.username
-    }, () => console.log('profile data', data)))
+    // fetch('https://frozen-temple-72152.herokuapp.com/profile', {
+    //   headers: {"Authorization": localStorage.getItem("token")}
+    // })
+    // .then(res => res.json())
+    // .then(data => this.setState({
+    //   favorites: data.favorites,
+    //   visited: data.visited,
+    //   username: data.username
+    // }, () => console.log('profile data', data)))
   }
 
   favoriteClickHandler = (store) => {
@@ -91,7 +91,6 @@ class App extends React.Component{
       backdrop = <Backdrop
         backdropClickHandler={this.backdropClickHandler}/>;
     }
-    // console.log('App state', this.state)
     return (
       <div className="conts-wrapper">
         <NavBar

@@ -21,11 +21,10 @@ class NavBar extends React.Component{
 
   handleLogOut = (e) => {
     localStorage.clear()
-    window.location.replace(`http://localhost:3001/`)
+    window.location.replace(`http://localhost:3000/login`)
   }
 
   render(){
-    // console.log(this.props)
     return (
         // NAVBAR
         <Navbar expand="lg">
