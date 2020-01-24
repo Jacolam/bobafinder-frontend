@@ -9,19 +9,17 @@ class Store extends React.Component{
   }
 
   componentDidMount(){
-    // console.log(this.props.store.visited)
       if( this.props.store.visited){
         this.setState({
           visited: true
         })
       }
-      // console.log(this.props.store.favorite)
       if( this.props.store.favorite){
         this.setState({
           like: true
         })
       }
-  
+
   }
 
   handleClickLike = (e) => {
@@ -31,7 +29,7 @@ class Store extends React.Component{
       like: !this.state.like
     })
 
-    fetch('https://frozen-temple-72152.herokuapp.com/favorite',{
+    fetch('https://bobafinderbackend.herokuapp.com/favorite',{
       method: "POST",
       headers: {
         "Authorization": localStorage.getItem("token"),
@@ -46,13 +44,12 @@ class Store extends React.Component{
   }
 
   handleClickVisited = (e) => {
-    // console.log(e.target.id)
 
     this.setState({
       visited: !this.state.visited
     })
 
-    fetch('https://frozen-temple-72152.herokuapp.com/visit',{
+    fetch('https://bobafinderbackend.herokuapp.com/visit',{
       method: "POST",
       headers: {
         "Authorization": localStorage.getItem("token"),

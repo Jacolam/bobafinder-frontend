@@ -26,7 +26,7 @@ class LoginPage extends React.Component{
   handleSubmit = (e) => {
     e.preventDefault()
 
-    fetch('https://frozen-temple-72152.herokuapp.com/login',{
+    fetch('https://bobafinderbackend.herokuapp.com/login',{
       method: "POST",
       headers: {
         "Content-Type": "application/json"

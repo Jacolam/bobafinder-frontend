@@ -19,7 +19,7 @@ class SignupPage extends React.Component{
     e.preventDefault()
 
     // creating a new user
-    fetch('https://frozen-temple-72152.herokuapp.com/signup',{
+    fetch('https://bobafinderbackend.herokuapp.com/signup',{
       method: "POST",
       headers: {
         "Content-Type": "application/json"

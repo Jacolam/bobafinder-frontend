@@ -22,7 +22,7 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    fetch('https://frozen-temple-72152.herokuapp.com/profile', {
+    fetch('https://bobafinderbackend.herokuapp.com/profile', {
       headers: {"Authorization": localStorage.getItem("token")}
     })
     .then(res => res.json())

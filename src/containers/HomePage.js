@@ -16,7 +16,7 @@ class HomePage extends React.Component{
       this.props.history.push("/login")
     }
 
-    fetch("https://frozen-temple-72152.herokuapp.com/stores", {
+    fetch("https://bobafinderbackend.herokuapp.com/stores", {
       headers:{
         "Authorization": localStorage.getItem("token")
       }
