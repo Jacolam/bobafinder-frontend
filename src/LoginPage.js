@@ -47,7 +47,7 @@ class LoginPage extends React.Component{
       if (localStorage.getItem("token")==="undefined"){
         localStorage.clear()
       } else if (!!localStorage.getItem("token")){
-        window.location.replace(`http://localhost:3000/login`)
+        window.location.replace(`https://bobafinderjl.herokuapp.com/login`)
       }
     })
     .catch((error) => {

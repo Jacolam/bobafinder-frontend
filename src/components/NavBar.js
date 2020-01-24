@@ -21,7 +21,7 @@ class NavBar extends React.Component{
 
   handleLogOut = (e) => {
     localStorage.clear()
-    window.location.replace(`http://localhost:3000/login`)
+    window.location.replace(`https://bobafinderjl.herokuapp.com/login`)
   }
 
   render(){

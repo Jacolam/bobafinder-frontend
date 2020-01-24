@@ -30,7 +30,7 @@ class SignupPage extends React.Component{
     .then( data => {
       // if successful, token will be recieved
       localStorage.setItem('token', data.token)
-      window.location.replace(`http://localhost:3000/`)
+      window.location.replace(`https://bobafinderjl.herokuapp.com/`)
       // this.props.history.push('/')
       //after sign up pushed to main page
     })
